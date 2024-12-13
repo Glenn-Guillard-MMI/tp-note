@@ -1,0 +1,399 @@
+{
+	"info": {
+		"_postman_id": "10fc2ca3-0e34-4801-b952-2f69e705b314",
+		"name": "tp_note_glenn_guillard",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33244021"
+	},
+	"item": [
+		{
+			"name": "Creation user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"glenn.guillard@gmail.com\",\r\n  \"password\": \"MDP123456!\",\r\n  \"name\": \"Glenn Guillard\",\r\n  \"phoneNumber\": \"0123456789\",\r\n  \"Role\": \"Admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/new",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"glenn.guillard@gmail.admin.com\",\r\n    \"password\": \"MDP123456!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creation resservation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MzQxMDM0MDIsImV4cCI6MTczNDEwNzAwMiwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJ1c2VybmFtZSI6ImdsZW5uLmd1aWxsYXJkQGdtYWlsLmFkbWluLmNvbSJ9.p_U6tkPowXdxgyUiNhBrOnKrAsX7I1OkrlvleInU5J2sJkNa8jqnIKlQCOZAezmhU20F404jD0pbL24PX-SQfN6be-pgOIVCx82xjZhLSti6RjBACfl2o61ZzRnoRSpHQ7xruqdVAs3Bo-XfaNXXRv6990I2ZQ24_tPCmGt14D8W2_7aTAKexHq2n8y07pyrBM-qMnqxht2IgT8xyJOPIiwqFPMOuOBMD2gFXO4nvioSyjcTo6y_MEMGNd1D7LvhhO-aPdGB_5qoOPUaQYfIw4g16_dHfSpjEGRO3Of7tbbQjGoGo32UZbKSnW3jBHXBZhiGnR2d76LbetKnFLezQsbgWacrB7ttKMIeb5uGFiru0jljpu4-UWig2hwxaDM-0-ErY7_DO6W3n72Zq0N4wuNM6yiB14gqcuqGKwBm7RBLM1GLiklyQLQdzJwK-vR_GECqrad07zX6on-2P1PAG5BWYMb8D5ICRLCsCS3lSHvfgHTKGNqdiBC2xuQuwdAVmF__jnJlPKcI9MVJHRUAtxgRovirRP_eylqtjx52509Xfu4clZ0qC2ALQLAfRCYoty2kUQ43mi_NOpKHhHbwimI-CXTnngzHVGeKISeBIoGFZjBPvViPDft5LP1t0qucNSAK7aosgY3RT_5LFriymdUf5rriLHRVTr7SSfE0GOE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"eventName\": \"event\",\r\n    \"date\": \"2024-12-13 18:00:00\",\r\n    \"timeSlot\": \"18:00-23:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/addReservation",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"addReservation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUser",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"glenn.guillard@gmail.com\",\r\n    \"name\": \"Pierre paul et JACK\",\r\n    \"phoneNumber\" : \"0745289451\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/update",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MzQxMDA5MjQsImV4cCI6MTczNDEwNDUyNCwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJ1c2VybmFtZSI6ImdsZW5uLmd1aWxsYXJkQGdtYWlsLmFkbWluLmNvbSJ9.ReOuyRLnFgnMPGzhsXPVUxEM47uoc_jnGRlfqp1KBlmYtrfx0WcwPuNII6nfSa4780IOI8KtE1MxHoMz_6lByXqc3Zto3E6NrkgLcIszzcJpoJ6SSvntfv7BFWNvDDL1lmDDDF73KqFiokYYZDOxxXhnfmp4uubrb1CxwwnJMHLNQ4J_cWYzxeJGz3T7vgG7DFXvSS3iS6eUrMImQOna9MNbz0RIlAPxDxc4dSG7i7t-hdKTGbCGjPP-W1yhifYBCNVfu-ccI1n72xI-E38c3y3-blBBa2S3gqIDEMt5_7hMLrV04Dn5aIUNKyrdNUGhPQFnZ8CPsa-54yl9zaD8miuxjgUl0aVriOL9g6P-Yc6nE8A5Zu8JmkntCGh7SnMKQVe0WnhLqJ-wUQH0pFrQq2SMmODOpSBdDG5i5lJDv4HIu7JWyTd8g3i0V-w45W683kYs8V_YrKAFvtJ1vlR8EZAxNsuYudxT4jxK-CYSS6PgVLaeEuCZUKtpngwaMwaYrwVXuoUbkhI01bz0-NYGS4zFwtR2kQDyBnQCye-FReWn_7rYiBZHnvqmZgeBHdKjAMYkL15RW8_RMsC9E78bd2MqF_tgB813rdRpQRLIFInwek4zIif2zQUOJAbjMFbAflbrNxS2XTrDWgxgrjzBG8rthr8PcP_ok0cLgJGoTHY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/delete/glenn.guilladrd@gmail.com",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"delete",
+						"glenn.guilladrd@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "showAllUser",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MzQxMDA5MjQsImV4cCI6MTczNDEwNDUyNCwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJ1c2VybmFtZSI6ImdsZW5uLmd1aWxsYXJkQGdtYWlsLmFkbWluLmNvbSJ9.ReOuyRLnFgnMPGzhsXPVUxEM47uoc_jnGRlfqp1KBlmYtrfx0WcwPuNII6nfSa4780IOI8KtE1MxHoMz_6lByXqc3Zto3E6NrkgLcIszzcJpoJ6SSvntfv7BFWNvDDL1lmDDDF73KqFiokYYZDOxxXhnfmp4uubrb1CxwwnJMHLNQ4J_cWYzxeJGz3T7vgG7DFXvSS3iS6eUrMImQOna9MNbz0RIlAPxDxc4dSG7i7t-hdKTGbCGjPP-W1yhifYBCNVfu-ccI1n72xI-E38c3y3-blBBa2S3gqIDEMt5_7hMLrV04Dn5aIUNKyrdNUGhPQFnZ8CPsa-54yl9zaD8miuxjgUl0aVriOL9g6P-Yc6nE8A5Zu8JmkntCGh7SnMKQVe0WnhLqJ-wUQH0pFrQq2SMmODOpSBdDG5i5lJDv4HIu7JWyTd8g3i0V-w45W683kYs8V_YrKAFvtJ1vlR8EZAxNsuYudxT4jxK-CYSS6PgVLaeEuCZUKtpngwaMwaYrwVXuoUbkhI01bz0-NYGS4zFwtR2kQDyBnQCye-FReWn_7rYiBZHnvqmZgeBHdKjAMYkL15RW8_RMsC9E78bd2MqF_tgB813rdRpQRLIFInwek4zIif2zQUOJAbjMFbAflbrNxS2XTrDWgxgrjzBG8rthr8PcP_ok0cLgJGoTHY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/showAll",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"showAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "showUserByEmail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MzQxMDA5MjQsImV4cCI6MTczNDEwNDUyNCwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJ1c2VybmFtZSI6ImdsZW5uLmd1aWxsYXJkQGdtYWlsLmFkbWluLmNvbSJ9.ReOuyRLnFgnMPGzhsXPVUxEM47uoc_jnGRlfqp1KBlmYtrfx0WcwPuNII6nfSa4780IOI8KtE1MxHoMz_6lByXqc3Zto3E6NrkgLcIszzcJpoJ6SSvntfv7BFWNvDDL1lmDDDF73KqFiokYYZDOxxXhnfmp4uubrb1CxwwnJMHLNQ4J_cWYzxeJGz3T7vgG7DFXvSS3iS6eUrMImQOna9MNbz0RIlAPxDxc4dSG7i7t-hdKTGbCGjPP-W1yhifYBCNVfu-ccI1n72xI-E38c3y3-blBBa2S3gqIDEMt5_7hMLrV04Dn5aIUNKyrdNUGhPQFnZ8CPsa-54yl9zaD8miuxjgUl0aVriOL9g6P-Yc6nE8A5Zu8JmkntCGh7SnMKQVe0WnhLqJ-wUQH0pFrQq2SMmODOpSBdDG5i5lJDv4HIu7JWyTd8g3i0V-w45W683kYs8V_YrKAFvtJ1vlR8EZAxNsuYudxT4jxK-CYSS6PgVLaeEuCZUKtpngwaMwaYrwVXuoUbkhI01bz0-NYGS4zFwtR2kQDyBnQCye-FReWn_7rYiBZHnvqmZgeBHdKjAMYkL15RW8_RMsC9E78bd2MqF_tgB813rdRpQRLIFInwek4zIif2zQUOJAbjMFbAflbrNxS2XTrDWgxgrjzBG8rthr8PcP_ok0cLgJGoTHY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/show/glenn.guillard@gmail.com",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"show",
+						"glenn.guillard@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addReservation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/addReservation/glenn.guillard@gmail.admin.com/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"addReservation",
+						"glenn.guillard@gmail.admin.com",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RemoveReservation",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/removeReservation/glenn.guillard@gmail.admin.com/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"removeReservation",
+						"glenn.guillard@gmail.admin.com",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllReservation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/getAllReservation",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"getAllReservation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getReservationById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/getReservationById/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"getReservationById",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateReservation",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MzQxMDY3OTcsImV4cCI6MTczNDExMDM5Nywicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJ1c2VybmFtZSI6ImdsZW5uLmd1aWxsYXJkQGdtYWlsLmFkbWluLmNvbSJ9.CuHmMp9aH2YrhovKw5D2RJJIeU_CY3pKHBYfHZ0eaJVuW17Kt7kd9-HXJOvC1XghYSYY6A8QqyLlzAh4ldCIGg6h0s1PxkjtQ1iS_2b213Xp3nnm1EniS80vCV_3miGucxKVYbfAZPX3GUiPI6Ba0Djpn9SbCKxnep-YL3XbP1_bl4xg07oyMVDi3RCN6s6TKCTtPC0cpx2pqP53mlqYiFtt9VxnAvUu_gs8HOBnHeRM2sDQPkVJn6XBpiIAdbgTYlbQ9vsM_syHAsHUHOy2jKf0FUkPcFp9zw6OsvMxsWmDFn9JTq07qcRqhjAWYCH4gkfyYE0ol2GPqEDtBmD9C9XBGjxmuic5YGaUUkDKH3yXSVp9c__icW3WvGkK9xJtvJ5baObShvIIiIw5dt2A0GeuSEEJulpksTGXMRTte6U4qchU1jhqdc8oGaAIvzW2tEzp7ZMKLzUD9R2sFn2U4j_nW171AGZanAeO8Naa73u16Nymu2i2fZKD-UQJqXmjKgTyfyW0zgw7Rx2xj0_kvWxDxUx_ergfEjPzKD6tjPEsKNFX2mtMJa3fjrENeEzxk7AhP4CCJ7PFhn8JTRNrc7oXyXLaKgLXvp35jDKSVJgyWUULabPfT3v0-gWDSNklYDNb9UaJJU9zSiCqybxdYPVnkWtkF4Y3yETkoifFPjE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"eventName\": \"new name\",\r\n    \"date\": \"2024-12-13 18:00:00\",\r\n    \"timeSlot\": \"18:00-23:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/updateReservation/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"updateReservation",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteReservationById",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE3MzQxMDY3OTcsImV4cCI6MTczNDExMDM5Nywicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJ1c2VybmFtZSI6ImdsZW5uLmd1aWxsYXJkQGdtYWlsLmFkbWluLmNvbSJ9.CuHmMp9aH2YrhovKw5D2RJJIeU_CY3pKHBYfHZ0eaJVuW17Kt7kd9-HXJOvC1XghYSYY6A8QqyLlzAh4ldCIGg6h0s1PxkjtQ1iS_2b213Xp3nnm1EniS80vCV_3miGucxKVYbfAZPX3GUiPI6Ba0Djpn9SbCKxnep-YL3XbP1_bl4xg07oyMVDi3RCN6s6TKCTtPC0cpx2pqP53mlqYiFtt9VxnAvUu_gs8HOBnHeRM2sDQPkVJn6XBpiIAdbgTYlbQ9vsM_syHAsHUHOy2jKf0FUkPcFp9zw6OsvMxsWmDFn9JTq07qcRqhjAWYCH4gkfyYE0ol2GPqEDtBmD9C9XBGjxmuic5YGaUUkDKH3yXSVp9c__icW3WvGkK9xJtvJ5baObShvIIiIw5dt2A0GeuSEEJulpksTGXMRTte6U4qchU1jhqdc8oGaAIvzW2tEzp7ZMKLzUD9R2sFn2U4j_nW171AGZanAeO8Naa73u16Nymu2i2fZKD-UQJqXmjKgTyfyW0zgw7Rx2xj0_kvWxDxUx_ergfEjPzKD6tjPEsKNFX2mtMJa3fjrENeEzxk7AhP4CCJ7PFhn8JTRNrc7oXyXLaKgLXvp35jDKSVJgyWUULabPfT3v0-gWDSNklYDNb9UaJJU9zSiCqybxdYPVnkWtkF4Y3yETkoifFPjE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/deleteReservationById/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"deleteReservationById",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
