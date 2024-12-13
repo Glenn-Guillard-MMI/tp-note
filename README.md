@@ -2,13 +2,13 @@
 
 ## .env
 
-Dans le .env de votre projet spécifier votre BDD afin que l'application fonctionne
+Dans le fichier `.env` de votre projet, spécifiez votre base de données afin que l'application fonctionne correctement.
 
 ```php
 DATABASE_URL="mysql://username:password@127.0.0.1:3306/Nom_De_la_bdd"
 ```
 
-Puis faite ces commande afin que l'aplication puisse crée les entity
+Ensuite, exécutez ces commandes afin que l'application puisse créer les entités :
 
 ```bash
 php bin/console doctrine:database:create
